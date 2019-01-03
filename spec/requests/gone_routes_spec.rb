@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe "auto creation and deletion of gone routes", type: :request do
+  before :each do
+    User.create
+  end
   describe "soft-deleting a route" do
     before :each do
       FactoryBot.create(:backend, backend_id: "a-backend")

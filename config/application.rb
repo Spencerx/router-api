@@ -25,5 +25,6 @@ module RouterApi
     # -- all .rb files in that directory are automatically loaded.
 
     config.paths["log"] = ENV["LOG_PATH"] if ENV["LOG_PATH"]
+    GDS::SSO::Config.api_only = true
   end
 end

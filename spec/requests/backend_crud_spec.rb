@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe "managing backends", type: :request do
+  before :each do
+    User.create
+  end
   describe "getting details of a backend" do
     it "should return the backend details as JSON" do
       FactoryBot.create(:backend, backend_id: "foo", backend_url: "http://foo.example.com/")
